@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTP-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Color Models</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+    </head>
+    <body onload="setValues(),rgb()" >
+        <div class="container">
+            
+        <nav class="navbar navbar-expand-xl navbar-dark bg-headtop">
+            <h1 style="color: white; font-family: sans-serif; padding-left: 75px;">Color Models</h1>
+            <button class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"> 
+            <span class="navbar-toggler-icon"></span> 
+        </button> 
+        <div class="collapse navbar-collapse text-right" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="rgb.html">RGB</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="cmy.html">CMY</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="web-safe-colors.html">Web Safe Colors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+            </ul>
+        </div>
+        </nav>
+        <br>
+            <div class="row">
+                <div class="col-sm-6 col-xs-12">
+                    <div class="card text-left">
+                        <div class="card-title alert alert-danger h2" style="font-family: sans-serif; padding-top: 25px; padding-bottom: 25px"><b>&nbsp<span class='red'>Red</span> <span class='green'>Green</span><span class='blue'> Blue</span> (<span class='red'>R</span><span class='green'>G</span><span class='blue'>B</span>)</b></div>
+                        <div class="card-body">
+                            <b><span class='red'>R</span><span class='green'>G</span><span class='blue'>B</span></b> is an <i>additive color projected light color model </i>where each<br>
+                            color is stored in <i>one byte.</i><br>
+                            All possible combinations of <b><span class='red'>Red</span> <span class='green'>,Green, </b>and <b></span><span class='blue'> Blue</span> </b>give<br>
+                            2<sup>24</sup>=16,777,216 different colors.<br><br>
+                            Starting with (<b><span class='red'>Red</span> <span class='green'>,Green</span><span class='blue'> ,Blue</span></b>)=(<b><span class='red'>0,</span> <span class='green'>0,</span><span class='blue'>0</span></b>)(black), to which different<br>
+                            color "lights" are added to produce visible colors.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <div class="card text-left">
+                        <div class="card-title alert alert-success h2" style="font-family: sans-serif; padding-top: 25px; padding-bottom: 25px"><b>&nbsp<span class='red'>Red</span> <span class='green'>Green</span><span class='blue'> Blue</span> (<span class='red'>R</span><span class='green'>G</span><span class='blue'>B</span>)</b></div>
+                        <div class="card-body">
+                            <h3>Select <b><span class='red'>R</span><span class='green'>G</span><span class='blue'>B</span> </b> values:</h3>
+                            <b><span class='red'>Red:</span></b><select id="rednum" name="numbers" onchange="displayRGBColors();"></select>
+                            <b><span class='green'>Green:</span></b><select id="greennum" name="numbers" onchange="displayRGBColors();"></select>
+                            <b><span class='blue'>Blue:</span></b><select id="bluenum" name="numbers" onchange="displayRGBColors();"></select> 
+                            <hr>
+                            <table class="table table-stripped text-center" id="output">
+                                <thead class="alert alert-info text-dark">
+                                    <tr><th><span class='red'>R</span><span class='green'>G</span><span class='blue'>B</span> Float Values</th><th><span class='red'>R</span><span class='green'>G</span><span class='blue'>B</span> Hexadecimal Values</th><th>Display</th></tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <button type="button " id="change" class="btn text-light text-center bg-headtop" style="margin:auto;display:block;" onclick="generateRandomColors();">Generate Random Colors</button>
+    <br>
+    <br>
+    <div class="text-center">
+        <kbd>&copy; 2019. G.Ghai. All rights reserved.</kbd>
+    </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
